@@ -1,9 +1,15 @@
 n=int(input("Enter the number of students: "))
 marks=[]
+roll=[]
 v=0
 f=0
 for i in range(n):
     marks.append(int(input("Enter the marks of student {}: ".format(i+1))))
+    roll.append(int(input("Enter the roll number of student {}: ".format(i+1))))
+    if roll[i] % 2 == 0:
+        print("personalized check: even roll number")
+    else:
+        print("personalized check: odd roll number")
     if marks[i]>=90 and marks[i]<=100:
         print("Excellent")
         v=v+1
