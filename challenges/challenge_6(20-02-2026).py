@@ -1,10 +1,9 @@
 n=int(input("Enter the number of songs"))
 duration=[]
-s=0
-l=0
 for i in range(n):
     d=int(input("Enter duration of song "+str(i + 1)+" in seconds: "))
     duration.append(d)
+name=input("Enter the playlist name")
 for i in range(n):
     if duration[i]<=0:
         print("Invalid Playlist")
@@ -31,6 +30,14 @@ elif sum1>3600:
 else:
         print("Category: Balanced Playlist")
         print("Recommendation: Good listening session")
+if len(name)%2==0:
+    print("Playlist name : ",name)
+    print("Personalisation : Playlist name is even")
+else:
+    print("Playlist name : ",name)
+    print("Personalisation : Playlist name is odd")
+
+
 
 
 
